@@ -36,9 +36,42 @@ package kyu7;
 
 public class DotCalc {
     public static void main(String[] args) {
-        dotCalc();
+        dotCalc("..... - .");
+        System.out.println(dotCalc("..... - ."));
     }
     public static String dotCalc(String txt) {
-
+        if (txt.contains("+")) {
+            String[] a = txt.split("\\+");
+            return a[0].trim() + a[1].trim();
+        }
+        if (txt.contains("-")) {
+            String[] a = txt.split("-");
+            if (a[0].trim().length() == a[1].trim().length()) {
+                return "";
+            }
+            return a[0].trim().substring(0, a[0].trim().length() - a[1].trim().length());
+        }
+        if (txt.contains("*")) {
+            StringBuilder sb = new StringBuilder();
+            String[] a = txt.split("\\*");
+            int b = a[0].trim().length() * a[1].trim().length();
+            for (int i = 0; i < b; i++) {
+                sb.append(".");
+            }
+            return sb.toString();
+        }
+        if (txt.contains("//")) {
+            StringBuilder sb = new StringBuilder();
+            String[] a = txt.split("//");
+            if (a[0].trim().length() < a[1].trim().length()) {
+                return "";
+            }
+            int b = a[0].trim().length() / a[1].trim().length();
+            for (int i = 0; i < b; i++) {
+                sb.append(".");
+            }
+            return sb.toString();
+        }
+        return "";
     }
 }
