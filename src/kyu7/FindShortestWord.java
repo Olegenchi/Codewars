@@ -10,9 +10,6 @@ package kyu7;
  * String will never be empty and you do not need to account for different data types.
 */
 
-import java.util.Arrays;
-import java.util.Comparator;
-
 public class FindShortestWord {
     public static void main(String[] args) {
         findShort("bitcoin take over the world maybe who knows perhaps");
