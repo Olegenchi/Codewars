@@ -14,10 +14,6 @@ package kyu7;
  *      "double  spaces"      ==> "elbuod  secaps"
 */
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class ReverseWords {
     public static String reverseWords(final String original) {
         String[] words = original.split(" ");
