@@ -28,7 +28,7 @@ public class Scramblies {
         if (str2.length() > str1.length()) {
             return false;
         }
-        for (String letter: str2.split("")) {
+        for (String letter : str2.split("")) {
             if (!str1.contains(letter)) {
                 return false;
             }
